@@ -2050,6 +2050,88 @@
         </Folders>
         <Triggers />
       </Folder>
+      <Folder Id="e27100fe-0a6d-410c-9504-04f77e9bd541" Name="Other" Enabled="true">
+        <Folders>
+          <Folder Id="3d1cbfad-2a7f-4ecb-a676-9de34b7f1a91" Name="Mitigation" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Troubadour" Id="050e8bc0-e5d3-4ee2-9464-41b4186c3e33" RegularExpression="uses Troubadour.|">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Troub" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Shield Samba" Id="1ea59e61-a22b-4156-9f2d-ceb0a74b6821" RegularExpression="uses Shield Samba.">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Samba" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Tactician" Id="a1dd8cf1-99e1-4d1d-ad5d-62f65b8b7001" RegularExpression="uses Tactician.">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Tactician" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Heart of Light" Id="6325954d-2a92-4d47-818e-f012b1f1ce29" RegularExpression="^21\|[^|]*\|[^|]*\|[^|]*\|3F20\|">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Heart of Light" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Shake It Off" Id="b9b7be8b-313e-4bd0-a604-252ee1b697c7" RegularExpression="uses Shake It Off.">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Shake" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Dark Missionary" Id="72b873cb-d44e-4384-b364-0850b7cd880d" RegularExpression="uses Dark Missionary.">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Missionary" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Reprisal" Id="d3190191-7735-43b5-84dd-4ded328e7de8" RegularExpression="^21\|[^|]*\|[^|]*\|[^|]*\|1D6F\|">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Reprisal" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Feint" Id="b18841d2-0f98-4c23-965f-3110b4bb7629" RegularExpression="^21\|[^|]*\|[^|]*\|[^|]*\|1D7D\|">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Feint" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Addle" Id="a5b76af0-0eeb-443a-b0e5-a42eae05a487" RegularExpression="^21\|[^|]*\|[^|]*\|[^|]*\|1D88\|">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Addle" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
     </Folders>
     <Triggers />
   </ExportedFolder>
