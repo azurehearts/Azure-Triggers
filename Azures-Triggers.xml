@@ -77,18 +77,20 @@
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Mortal Vow Cast Target" Id="c0d83f37-fa61-41ac-b640-72d798ba3dc9" RegularExpression="^21\|(?:[^|]*\|){3}6D30\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|">
+                  <Trigger Enabled="true" Source="FFXIVNetwork" Name="Mortal Vow Initial Target" Id="c0d83f37-fa61-41ac-b640-72d798ba3dc9" RegularExpression="^21\|(?:[^|]*\|){3}6D30\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="Vow on ${name}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="false" Source="FFXIVNetwork" Name="Mortal Vow Debuff" Id="fba24d9d-01c4-4c04-879b-cca5f7d5a45b" RegularExpression="^26\|[^|]*\|B50\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)">
+                  <Trigger Enabled="false" Source="FFXIVNetwork" Name="Mortal Vow Debuff Pass" Id="fba24d9d-01c4-4c04-879b-cca5f7d5a45b" RegularExpression="^26\|[^|]*\|B50\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="Vow on ${name}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -1293,7 +1295,7 @@
       </Folder>
       <Folder Id="1012dc88-9f01-4093-a873-90983b055c7d" Name="Trials" Enabled="true">
         <Folders>
-          <Folder Id="a8744c87-7ff8-4c1a-95ac-97e2904cf998" Name="EX 4 - Storm's Crown" Enabled="true">
+          <Folder Id="a8744c87-7ff8-4c1a-95ac-97e2904cf998" Name="EX 4 - Storm's Crown" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="Savage Barbery" Id="051680b4-26c3-458d-a4ea-7ce990729ff7" RegularExpression="^20\|[^|]*\|[^|]*\|[^|]*\|(?&lt;id&gt;757[4A])\|">
@@ -1434,7 +1436,7 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="ae31713e-3e5d-4b34-a4f7-4b345de2daec" Name="Sephirot Unreal" Enabled="true">
+          <Folder Id="ae31713e-3e5d-4b34-a4f7-4b345de2daec" Name="Sephirot Unreal" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="Earthshaker" Id="3826e574-ba30-42ca-b616-4158918ed12a" RegularExpression="^27\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|[^|]*\|[^|]*\|0028\|">
@@ -1487,6 +1489,67 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="98da12de-62a5-4001-bd27-58b9d3ad60a1" Name="Sophia Unreal" Enabled="true">
+            <Folders>
+              <Folder Id="b23046e9-83c3-4254-8528-5158fe9d4389" Name="Adds" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="Divine Spark" Id="989a1b28-a154-446f-9257-fb1fa788c619" RegularExpression="The Second Demiurge readies Divine Spark">
+                    <Actions>
+                      <Action OrderNumber="1" UseTTSTextExpression="Look Away" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" />
+                    </Actions>
+                  </Trigger>
+                  <Trigger Enabled="true" Name="Infusion" Id="7945169f-1d34-4b15-91fb-f83d86da8882" RegularExpression="The First Demiurge readies Infusion.">
+                    <Actions>
+                      <Action OrderNumber="1" UseTTSTextExpression="Soak" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Name="Arms of Wisom" Id="7f67fc67-6409-45d0-914d-6a183ca6dd23" RegularExpression="Sophia readies Arms of Wisdom">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Buster" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="Thunder II" Id="f971e59a-2ac9-4eb6-8250-619e60f6be3e" RegularExpression="Sophia readies Thunder II.">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Cone" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="Aero III" Id="6ed43b1d-bc57-4e4c-ba55-a080905f7ddb" RegularExpression="Sophia readies Aero III.">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Chariot" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="Thunder III" Id="d447a0ea-38b9-45aa-b63f-7abcbc76c4f8" RegularExpression="Sophia readies Thunder III.">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Dyanmo" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -1716,17 +1779,9 @@
       </Folder>
       <Folder Id="e27100fe-0a6d-410c-9504-04f77e9bd541" Name="Other" Enabled="true">
         <Folders>
-          <Folder Id="3d1cbfad-2a7f-4ecb-a676-9de34b7f1a91" Name="Mitigation" Enabled="true">
+          <Folder Id="3d1cbfad-2a7f-4ecb-a676-9de34b7f1a91" Name="Mitigation" Enabled="false">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Troubadour" Id="050e8bc0-e5d3-4ee2-9464-41b4186c3e33" RegularExpression="uses Troubadour.|">
-                <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="Troub" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="Shield Samba" Id="1ea59e61-a22b-4156-9f2d-ceb0a74b6821" RegularExpression="uses Shield Samba.">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="Samba" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
@@ -1786,6 +1841,14 @@
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="Addle" Id="a5b76af0-0eeb-443a-b0e5-a42eae05a487" RegularExpression="^21\|[^|]*\|[^|]*\|[^|]*\|1D88\|">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="Addle" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Source="FFXIVNetwork" Name="Troubadour" Id="050e8bc0-e5d3-4ee2-9464-41b4186c3e33" RegularExpression="uses Troubadour.">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="Troub" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
